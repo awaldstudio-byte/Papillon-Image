@@ -34,6 +34,7 @@ This build is intentionally compatible with **both** deployment and direct local
 - Helga's supplied copy, named service system and pricing
 - Five supplied 5-star testimonials
 
+The duplicated Facebook/logo exports supplied in several sizes are intentionally not all shown on-page; using every duplicate would repeat the same artwork rather than add value.
 
 ## SEO / technical work already included
 - Unique title and meta description per route
@@ -85,8 +86,11 @@ SOCIAL LINKS
 ------------
 WhatsApp: https://wa.me/27827458207
 Instagram: https://www.instagram.com/papillon_image/
+Facebook: https://www.facebook.com/PapillonImage/
 
+The Instagram handle and Facebook page were supplied by Helga in the onboarding material.
 The WhatsApp link is generated from the supplied South African mobile number (+27 82 745 8207).
+Facebook was normalised from the supplied Page ID to the public PapillonImage page URL.
 
 
 A WALD STUDIO CREATOR CREDIT
