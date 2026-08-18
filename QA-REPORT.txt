@@ -1,0 +1,47 @@
+PASS about.html                         1440px scroll=1440x4624 imgs=4
+PASS contact.html                       1440px scroll=1440x2628 imgs=2
+PASS groups-talks.html                  1440px scroll=1440x3207 imgs=3
+PASS index.html                         1440px scroll=1440x7674 imgs=7
+PASS kaleidoscope-colour-analysis.html  1440px scroll=1440x3861 imgs=3
+PASS make-up-masterclass.html           1440px scroll=1440x3572 imgs=3
+PASS personal-shopping.html             1440px scroll=1440x3755 imgs=3
+PASS pocket-stylist.html                1440px scroll=1440x3109 imgs=4
+PASS services.html                      1440px scroll=1440x5823 imgs=3
+PASS signature-style-analysis.html      1440px scroll=1440x4172 imgs=3
+PASS travel-light.html                  1440px scroll=1440x3572 imgs=3
+PASS wardrobe-edit.html                 1440px scroll=1440x3708 imgs=3
+PASS about.html                         390px scroll=390x5163 imgs=4
+PASS contact.html                       390px scroll=390x3624 imgs=2
+PASS groups-talks.html                  390px scroll=390x4135 imgs=3
+PASS index.html                         390px scroll=390x11810 imgs=7
+PASS kaleidoscope-colour-analysis.html  390px scroll=390x5004 imgs=3
+PASS make-up-masterclass.html           390px scroll=390x4727 imgs=3
+PASS personal-shopping.html             390px scroll=390x4938 imgs=3
+PASS pocket-stylist.html                390px scroll=390x4634 imgs=4
+PASS services.html                      390px scroll=390x9045 imgs=3
+PASS signature-style-analysis.html      390px scroll=390x5299 imgs=3
+PASS travel-light.html                  390px scroll=390x4740 imgs=3
+PASS wardrobe-edit.html                 390px scroll=390x4967 imgs=3
+
+FAILURES 0
+
+LOCAL / DEPLOYMENT PATH FIX — 18 AUGUST 2026
+PASS all HTML stylesheet/font/script/image references converted to local-safe relative paths
+PASS all internal navigation routes converted to existing local .html targets
+PASS responsive srcset files resolve to existing local assets
+PASS manifest icons/start URL use relative paths
+PASS static reference validation: 0 missing files
+PASS post-fix browser render QA: 26/26 page/viewport runs, 0 failures (includes 404 at desktop + mobile)
+PASS homepage desktop review render: 1440px, no errors
+PASS homepage mobile review render: 390px, no errors
+
+The same relative paths are valid when deployed. Vercel cleanUrls remains enabled for production URL presentation.
+
+CONSULTATION PHOTO CROP REVIEW — 18 AUGUST 2026
+PASS homepage desktop hero reframed so Helga's full face/head remains visible while retaining colour fan and client foreground
+PASS homepage responsive hero visually reviewed at 1760x900, 1440x900, 1024x768, 768x1024 and 390x844
+PASS About Helga image-band crop reviewed desktop + mobile; Helga's face remains visible and overlay does not obscure the focal point
+PASS Groups & Talks image-band crop reviewed desktop + mobile; focal point remains intact
+PASS Wardrobe Edit, Personal Shopping, Make-up Masterclass and Travel Light consultation-photo cards checked; these use the uncropped source ratio and require no repositioning
+PASS post-adjustment browser render QA: 26/26 page/viewport runs, 0 failures
+PASS no horizontal overflow, failed image, JavaScript error or font regression detected
