@@ -34,7 +34,6 @@ This build is intentionally compatible with **both** deployment and direct local
 - Helga's supplied copy, named service system and pricing
 - Five supplied 5-star testimonials
 
-The duplicated Facebook/logo exports supplied in several sizes are intentionally not all shown on-page; using every duplicate would repeat the same artwork rather than add value.
 
 ## SEO / technical work already included
 - Unique title and meta description per route
@@ -86,11 +85,8 @@ SOCIAL LINKS
 ------------
 WhatsApp: https://wa.me/27827458207
 Instagram: https://www.instagram.com/papillon_image/
-Facebook: https://www.facebook.com/PapillonImage/
 
-The Instagram handle and Facebook page were supplied by Helga in the onboarding material.
 The WhatsApp link is generated from the supplied South African mobile number (+27 82 745 8207).
-Facebook was normalised from the supplied Page ID to the public PapillonImage page URL.
 
 
 A WALD STUDIO CREATOR CREDIT
@@ -98,3 +94,11 @@ A WALD STUDIO CREATOR CREDIT
 A restrained "Website by A WALD STUDIO" creator credit appears in the legal footer row on all
 public pages and links to https://awaldstudio.com. It is intentionally subtle so Papillon Image
 remains the visual focus.
+
+IOS SAFARI TYPOGRAPHY FIX
+-------------------------
+The supplied Avant Garde Thin font contained malformed Unicode cmap mappings for curly
+apostrophes/quotation marks and typographic dashes. This caused iOS Safari to render contractions
+such as “isn’t” and “It’s” with large gaps in display headings. The font mappings have been corrected
+inside the supplied font itself, preserving Papillon’s official typography without substituting a
+third-party font.
