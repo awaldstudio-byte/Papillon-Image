@@ -1,8 +1,8 @@
-@font-face{font-family:'AvantGarde';src:url('../fonts/avantgarde-book.woff2') format('woff2'),url('../fonts/AvantGarde-Book Th(1).ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'AvantGarde';src:url('../fonts/avantgarde-demi.woff2') format('woff2'),url('../fonts/AvantGardeITCTT Demi.ttf') format('truetype');font-weight:600;font-style:normal;font-display:swap}
-@font-face{font-family:'AvantGarde';src:url('../fonts/avantgarde-bold.woff2') format('woff2'),url('../fonts/Avant Garde Bold (1).ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'AvantGardeThin';src:url('../fonts/avantgarde-thin.woff2') format('woff2'),url('../fonts/AvantGarde-Thin.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
-@font-face{font-family:'AvantGarde';src:url('../fonts/avantgarde-book-oblique.woff2') format('woff2'),url('../fonts/AvantGardeITCTT BookOblique.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'AvantGarde';src:url('../fonts/avantgarde-book-ios4.woff2') format('woff2'),url('../fonts/AvantGarde-Book Th(1).ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'AvantGarde';src:url('../fonts/avantgarde-demi-ios4.woff2') format('woff2'),url('../fonts/AvantGardeITCTT Demi.ttf') format('truetype');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'AvantGarde';src:url('../fonts/avantgarde-bold-ios4.woff2') format('woff2'),url('../fonts/Avant Garde Bold (1).ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'AvantGardeThin';src:url('../fonts/avantgarde-thin-ios4.woff2') format('woff2'),url('../fonts/AvantGarde-Thin.ttf') format('truetype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'AvantGarde';src:url('../fonts/avantgarde-book-oblique-ios4.woff2') format('woff2'),url('../fonts/AvantGardeITCTT BookOblique.ttf') format('truetype');font-weight:400;font-style:italic;font-display:swap}
 
 :root{
   --coral:#F17179;
@@ -68,7 +68,7 @@ button{color:inherit}
 .hero-media{position:absolute;inset:0}.hero-media picture,.hero-media img{width:100%;height:100%}.hero-media img{object-fit:cover;object-position:50% 28%}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(25,18,21,.68) 0%,rgba(25,18,21,.30) 36%,rgba(25,18,21,.02) 64%,rgba(25,18,21,.14) 100%);z-index:1}
 .hero-content{position:relative;z-index:2;min-height:calc(100vh - 124px);display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:6vw 0;color:white}
-.hero-content .eyebrow{color:#ffd1d4}.hero-content .display{max-width:880px;text-wrap:balance}.hero-sub{display:flex;align-items:center;gap:1rem;margin-top:1.8rem;font-size:clamp(.9rem,1.25vw,1.15rem);text-transform:uppercase;letter-spacing:.15em}.hero-sub span:not(:last-child)::after{content:'•';margin-left:1rem;color:var(--coral)}
+.hero-content .eyebrow{color:#ffd1d4}.hero-content .display{max-width:880px;text-wrap:balance}.hero-sub{display:flex;align-items:center;gap:1rem;margin-top:1.8rem;font-size:clamp(.9rem,1.25vw,1.15rem);text-transform:uppercase;letter-spacing:.15em}.hero-sub span:not(:last-child)::after{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--coral);margin-left:1rem;vertical-align:middle}
 .hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:2.3rem}
 .hero-badge{position:absolute;right:5vw;bottom:4vw;z-index:2;width:128px;height:128px;border-radius:50%;border:1px solid rgba(255,255,255,.42);display:grid;place-items:center;background:rgba(255,255,255,.08);backdrop-filter:blur(10px)}.hero-badge img{width:78%;filter:brightness(0) invert(1)}
 
@@ -84,7 +84,7 @@ button{color:inherit}
 
 .about-tease{background:var(--plum);color:white;overflow:hidden}.about-tease-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:0;align-items:stretch}.about-image{min-height:720px;position:relative;background:var(--blush)}.about-image img{width:100%;height:100%;object-fit:cover;object-position:50% 34%;filter:sepia(.12)}.about-copy{padding:clamp(3rem,7vw,7rem);align-self:center}.about-copy .eyebrow{color:#f9b4b9}.about-copy .h2{max-width:720px}.about-copy .quote-line{font-size:clamp(1.15rem,1.5vw,1.6rem);color:#f5e9ef;max-width:650px;margin:2rem 0}.about-copy .button{margin-top:.6rem}
 
-.pocket{background:var(--cream)}.pocket-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(3rem,7vw,7rem);align-items:center}.pocket-images{position:relative;min-height:650px}.pocket-images figure{margin:0;position:absolute;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:white}.pocket-images figure:first-child{width:66%;left:0;top:0;transform:rotate(-3deg)}.pocket-images figure:last-child{width:60%;right:0;bottom:0;transform:rotate(4deg)}.pocket-list{display:grid;grid-template-columns:1fr 1fr;gap:.75rem 1.2rem;margin:2rem 0 0;padding:0;list-style:none}.pocket-list li{font-size:.86rem;border-top:1px solid var(--line);padding-top:.75rem}.pocket-list li::before{content:'•';color:var(--coral);margin-right:.55rem}
+.pocket{background:var(--cream)}.pocket-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(3rem,7vw,7rem);align-items:center}.pocket-images{position:relative;min-height:650px}.pocket-images figure{margin:0;position:absolute;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:white}.pocket-images figure:first-child{width:66%;left:0;top:0;transform:rotate(-3deg)}.pocket-images figure:last-child{width:60%;right:0;bottom:0;transform:rotate(4deg)}.pocket-list{display:grid;grid-template-columns:1fr 1fr;gap:.75rem 1.2rem;margin:2rem 0 0;padding:0;list-style:none}.pocket-list li{font-size:.86rem;border-top:1px solid var(--line);padding-top:.75rem}.pocket-list li::before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--coral);margin-right:.65rem;vertical-align:middle}
 
 .testimonials{background:var(--ink);color:white}.testimonial-head{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:end;margin-bottom:4rem}.testimonial-head .eyebrow{color:#ffadb4}.testimonial-head p{color:#c9bec2;margin:0}.review-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.15)}.review{background:var(--ink);padding:clamp(1.6rem,3vw,3rem);min-height:310px;display:flex;flex-direction:column;justify-content:space-between}.review:nth-child(1){grid-column:span 7}.review:nth-child(2){grid-column:span 5;background:#2d2529}.review:nth-child(3){grid-column:span 4;background:#33272d}.review:nth-child(4){grid-column:span 4}.review:nth-child(5){grid-column:span 4;background:#2d2529}.review blockquote{font-family:'AvantGardeThin';font-size:clamp(1.25rem,2vw,2rem);line-height:1.35;margin:0}.review footer{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:#d7cbd0;margin-top:2rem}.stars{letter-spacing:.2em;color:var(--coral);font-size:.85rem;margin-bottom:1.5rem}
 
@@ -221,4 +221,46 @@ button{color:inherit}
     font-size:.62rem!important;
   }
   .awald-credit-name{letter-spacing:.13em}
+}
+
+/* iOS/Safari typography hardening */
+body{
+  font-synthesis:none;
+  -webkit-text-size-adjust:100%;
+}
+.display,.h1,.h2,.h3{
+  font-kerning:normal;
+  font-synthesis:none;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Vector UI icons — never render as platform emoji */
+.menu-arrow{
+  width:18px;
+  height:18px;
+  display:inline-grid;
+  place-items:center;
+  flex:0 0 auto;
+}
+.menu-arrow svg{
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.45;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.rating-stars{
+  display:flex;
+  align-items:center;
+  gap:.28rem;
+  color:var(--coral);
+  margin-bottom:1.5rem;
+}
+.rating-stars svg{
+  width:.9rem;
+  height:.9rem;
+  fill:currentColor;
+  flex:0 0 auto;
 }
