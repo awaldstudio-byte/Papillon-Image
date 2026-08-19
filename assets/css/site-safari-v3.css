@@ -300,3 +300,6 @@ body{
 -webkit-font-smoothing:antialiased;
 font-family:inherit;
 }
+
+/* Facebook button removed from Papillon public UI. */
+.social-button.facebook{display:none!important;}
