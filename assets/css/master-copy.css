@@ -59,3 +59,74 @@
   .contact-details dd{overflow-wrap:anywhere}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Keep the approved portrait and headline in separate, responsive regions. */
+.hero{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);min-height:0;background:var(--cream);overflow:visible}
+.hero::after{display:none}
+.hero-media{position:relative;inset:auto;width:100%;min-width:0;min-height:0}
+.hero-media picture{position:absolute;inset:0;display:block}
+.hero-media img{object-fit:cover;object-position:42% 30%}
+.hero-content{width:100%;margin:0;min-width:0;min-height:clamp(660px,calc(100svh - 124px),980px);padding:clamp(3rem,5vw,6rem) clamp(2rem,4vw,5rem);justify-content:center;background:var(--cream);color:var(--ink)}
+.hero-content .eyebrow{color:var(--coral-deep)}
+.hero-content .display{font-size:clamp(3.15rem,4.3vw,5.6rem);line-height:1.04;letter-spacing:-.035em;max-width:700px;text-wrap:balance}
+.hero-content .hero-sub{flex-wrap:wrap;gap:.65rem;font-size:.8rem;line-height:1.6;letter-spacing:.12em}
+.hero-content .hero-sub span:not(:last-child)::after{margin-left:.65rem}
+.hero-content .hero-actions{margin-top:2rem;gap:.75rem}
+.hero-content .button.light{border-color:var(--ink);color:var(--ink)}
+.hero-content .button.light:hover{background:var(--ink);color:white}
+.hero-badge{display:none}
+
+/* Both arrow pieces share one reserved icon area, including wrapped links. */
+.text-link{display:inline-block;align-self:flex-start;position:relative;min-width:0;max-width:100%;padding-right:1.7rem;line-height:1.6;overflow:visible}
+.text-link::before,.text-link::after{content:'';position:absolute;display:block;top:50%;margin:0;flex:none;pointer-events:none;transition:transform .2s ease}
+.text-link::before{right:.35rem;width:.9rem;height:1.6px;background:currentColor;border:0;transform:translateY(-50%);transform-origin:center}
+.text-link::after{right:.3rem;width:.5rem;height:.5rem;background:none;border-top:1.6px solid currentColor;border-right:1.6px solid currentColor;transform:translateY(-50%) rotate(45deg);transform-origin:center}
+.text-link:hover::before{transform:translate(2px,-50%)}
+.text-link:hover::after{transform:translate(2px,-50%) rotate(45deg)}
+.menu-arrow,.menu-arrow svg{overflow:visible;flex-shrink:0}
+.button,.social-button{white-space:normal;line-height:1.55;text-align:center;max-width:100%}
+.button svg,.social-button svg{flex-shrink:0;overflow:visible}
+
+@media(max-width:1100px) and (min-width:861px){
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .hero-content{min-height:660px;padding:3rem 2rem}
+  .hero-content .display{font-size:clamp(2.85rem,4.9vw,3.7rem)}
+}
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr}
+  .hero-media{aspect-ratio:1600/1490;max-height:660px}
+  .hero-media img{object-position:42% 26%}
+  .hero-content{min-height:0;padding:3.5rem max(20px,5vw) 4rem}
+  .hero-content .display{font-size:clamp(2.7rem,6.8vw,4.6rem);max-width:730px}
+  .hero-content .hero-actions{width:auto}
+}
+@media(max-width:620px){
+  .hero-content{padding:2.7rem 20px 3rem}
+  .hero-content .eyebrow{font-size:.67rem;letter-spacing:.13em}
+  .hero-content .display{font-size:clamp(2.55rem,9.7vw,3.65rem);line-height:1.08;letter-spacing:-.035em}
+  .hero-content .hero-sub{font-size:.72rem;gap:.55rem;margin-top:1.5rem}
+  .hero-content .hero-sub span:not(:last-child)::after{margin-left:.55rem}
+  .hero-content .hero-actions{width:100%;flex-direction:column;align-items:stretch}
+  .hero-content .hero-actions .button{flex:none;width:100%}
+}
+
+/* Brand coral stays decorative; readable text and interactive states use ink. */
+:root{--coral-action:#A53645}
+.eyebrow,.hero-content .eyebrow,.brand-name{color:var(--coral-action)}
+.page-hero.plum .eyebrow,.page-hero.ink .eyebrow{color:#FFD1D4}
+.cta-band .eyebrow{color:var(--ink)}
+.button.coral{color:var(--ink)}
+.button.coral:hover{background:var(--coral-action);border-color:var(--coral-action);color:white}
+.cost-section,.cost-section .eyebrow{color:var(--ink)}
+.cost-math span{opacity:1}
+.price-card.featured,.price-card.featured p{color:var(--ink)}
+.price-card.featured .eyebrow{color:var(--ink)!important}
+.price-card.featured .button.light{border-color:var(--ink);color:var(--ink)}
+.price-card.featured .button.light:hover{background:var(--ink);color:white}
+.social-button:hover{color:var(--coral-action)}
+.footer a:hover,.footer a:focus-visible{color:var(--coral)}
+.footer-socials .social-button:hover{color:var(--ink)}
+::selection{background:var(--coral);color:var(--ink)}
+:focus-visible{outline:3px solid var(--coral-action);outline-offset:5px}
+.cost-section :focus-visible,.price-card.featured :focus-visible{outline-color:var(--ink)}
+.footer :focus-visible,.about-tease :focus-visible,.testimonials :focus-visible{outline-color:#FFD1D4}

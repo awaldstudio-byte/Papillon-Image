@@ -39,6 +39,10 @@ function header(req, name) {
 function sameOrigin(req, env) {
   const rawOrigin = header(req, 'origin');
   if (!rawOrigin || rawOrigin === 'null') return false;
+  // Defence in depth for modern browsers. Older browsers or future unknown
+  // metadata values still have to pass the exact Origin/Host check below.
+  const fetchSite = header(req, 'sec-fetch-site');
+  if (['cross-site', 'same-site', 'none'].includes(fetchSite)) return false;
   const permittedHosts = new Set(['papillon-image.co.za', 'www.papillon-image.co.za']);
   if (typeof env.VERCEL_URL === 'string' && /^[a-z0-9-]+\.vercel\.app$/i.test(env.VERCEL_URL)) {
     permittedHosts.add(env.VERCEL_URL.toLowerCase());
@@ -58,6 +62,9 @@ function reply(res, status, payload) {
   res.statusCode = status;
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'no-store');
+  res.setHeader('CDN-Cache-Control', 'no-store');
+  res.setHeader('Vercel-CDN-Cache-Control', 'no-store');
+  res.setHeader('Vary', 'Origin, Sec-Fetch-Site');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.end(JSON.stringify(payload));
 }

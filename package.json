@@ -4,10 +4,11 @@
   "private": true,
   "description": "Papillon Image website and optional private SMTP contact delivery",
   "engines": {
-    "node": ">=22"
+    "node": "24.x"
   },
   "scripts": {
-    "test": "node --test tests/contact.test.cjs tests/contact-ui.test.cjs"
+    "build": "node scripts/build-static.mjs",
+    "test": "node --test tests/contact.test.cjs tests/contact-ui.test.cjs tests/contact-security.test.cjs tests/build-output.test.cjs tests/privacy-contract.test.cjs tests/visual-contract.test.mjs"
   },
   "dependencies": {
     "nodemailer": "10.0.15"

@@ -101,7 +101,12 @@ test('SMTP uses fixed recipient, authenticated sender, validated Reply-To, plain
   assert.equal(response.status, 200);
   assert.deepEqual(response.body, { ok: true });
   assert.equal(response.headers['Cache-Control'], 'no-store');
+  assert.equal(response.headers['CDN-Cache-Control'], 'no-store');
+  assert.equal(response.headers['Vercel-CDN-Cache-Control'], 'no-store');
+  assert.equal(response.headers.Vary, 'Origin, Sec-Fetch-Site');
   assert.equal(response.headers['X-Content-Type-Options'], 'nosniff');
+  assert.equal(response.headers['Set-Cookie'], undefined);
+  assert.equal(response.headers['Access-Control-Allow-Origin'], undefined);
   const config = instance.transports[0];
   assert.equal(config.host, 'smtp.purelymail.com');
   assert.equal(config.port, 465);
@@ -253,4 +258,41 @@ test('spoofed forwarding headers outside Vercel do not bypass the socket-IP buck
     } });
     assert.equal(result.status, index === 4 ? 429 : 200);
   }
+});
+
+test('Fetch Metadata rejects known cross-origin POST contexts even when Origin is forged', async () => {
+  for (const site of ['cross-site', 'same-site', 'none']) {
+    const instance = harness();
+    const result = await instance.call({ headers: {
+      origin: 'https://www.papillon-image.co.za', host: 'www.papillon-image.co.za',
+      'content-type': 'application/json', 'sec-fetch-site': site
+    } });
+    assert.equal(result.status, 403);
+    assert.equal(instance.messages.length, 0);
+  }
+  for (const site of ['same-origin', undefined, 'future-browser-value']) {
+    assert.equal((await harness().call({ headers: {
+      origin: 'https://www.papillon-image.co.za', host: 'www.papillon-image.co.za',
+      'content-type': 'application/json', 'sec-fetch-site': site
+    } })).status, 200);
+  }
+});
+
+test('validation failures consume the same best-effort attempt budget without sending', async () => {
+  const instance = harness();
+  for (let index = 0; index < 3; index += 1) {
+    assert.equal((await instance.call({ body: { ...VALID, website: 'spam' } })).status, 400);
+  }
+  assert.equal((await instance.call()).status, 429);
+  assert.equal(instance.messages.length, 0);
+});
+
+test('HTML-looking submitted text stays plain text and never becomes message HTML', async () => {
+  const instance = harness();
+  const message = '<img src="https://evil.example/tracker" onerror="alert(1)">';
+  const result = await instance.call({ body: { ...VALID, message } });
+  assert.equal(result.status, 200);
+  assert.ok(instance.messages[0].text.endsWith(message));
+  assert.equal(instance.messages[0].html, undefined);
+  assert.equal(instance.messages[0].attachments, undefined);
 });
