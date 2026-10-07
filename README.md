@@ -1,108 +1,47 @@
-# Papillon Image — A WALD STUDIO build
+# Papillon Image™ — approved master copy, 7 October 2026
 
-Premium multi-page website concept and production-ready static build for **Papillon Image™ / Helga Jackson**.
+The existing Papillon branding, photographs and five original testimonial quotations are retained. The 7 October 2026 final master supplied by Helga is the content authority.
 
-## Production routes
-- `/` — Home
-- `/about` — About Helga
-- `/services` — Services, pricing and FAQ
-- `/kaleidoscope-colour-analysis`
-- `/signature-style-analysis`
-- `/wardrobe-edit`
-- `/personal-shopping`
-- `/make-up-masterclass`
-- `/travel-light`
-- `/pocket-stylist`
-- `/groups-talks`
-- `/contact`
+## Main navigation
 
-Vercel `cleanUrls` is enabled, so the source files remain `.html` while the public URLs stay clean.
+Home | About Helga | Services | Pocket Stylist | Talks | Testimonials | FAQ | Contact
 
-## Local preview compatibility
-This build is intentionally compatible with **both** deployment and direct local opening. You can double-click `index.html` from the extracted folder and the CSS, fonts, JavaScript, images and internal page links use relative paths, so the designed site should load without running a local server. The same files remain deployable to Vercel; `cleanUrls` can still present public URLs without the `.html` suffix.
+The source files remain static HTML. Vercel clean URLs are retained, including the existing service URLs so old links remain usable. Privacy Policy and Terms & Conditions are linked from the footer only. The custom 404 contains the supplied copy.
 
-## Supplied Papillon material used
-- Helga consultation / mirror photograph — main hero and consultation storytelling
-- Helga seated portrait — founder/about storytelling
-- Colour Swatches image — colour analysis/services storytelling
-- Pocket Stylist COLOUR image
-- Pocket Stylist STYLE image
-- Papillon circular logo mark — navigation, favicon and hero accent
-- Papillon full white logo — footer
-- Papillon Coral `#F17179`
-- Client-supplied Avant Garde font family — converted to WOFF2 for web performance with original TTF fallbacks retained
-- Helga's supplied copy, named service system and pricing
-- Five supplied 5-star testimonials
+## Content implementation
 
-The duplicated Facebook/logo exports supplied in several sizes are intentionally not all shown on-page; using every duplicate would repeat the same artwork rather than add value.
+- Exact supplied copy and SEO titles/descriptions for all eight main pages.
+- Current pricing and service names on all service/detail pages.
+- Same-day Colour & Style Experience, including its R700 saving.
+- Kempton Park location and approved public travel terms.
+- Pocket Stylist clearly positioned as a third-party supporting tool.
+- Original testimonial quotations and attributions unchanged.
+- Existing verified contact destinations retained: WhatsApp +27 82 745 8207, helga@papillon-image.co.za and instagram.com/papillon_image/.
+- Existing Papillon favicon and brand mark used for social sharing.
+- Meaningful image alt text, reduced-motion support and content available without reveal-script execution.
+- No analytics, marketing pixels, remote fonts or website-added tracking cookies.
 
-## SEO / technical work already included
-- Unique title and meta description per route
-- Canonical URLs for `www.papillon-image.co.za`
-- Open Graph and Twitter metadata
-- Semantic heading hierarchy
-- `robots.txt`
-- XML sitemap
-- `ProfessionalService` structured data
-- Individual `Service` structured data and ZAR offers where pricing was supplied
-- `BreadcrumbList` structured data
-- Visible services FAQ + `FAQPage` structured data
-- Helga Jackson `Person` structured data on About
-- Local relevance for Kempton Park, Johannesburg and Gauteng
-- Optimised responsive WebP imagery with JPEG fallbacks
-- Local client-supplied fonts with WOFF2 delivery
-- Responsive desktop/mobile navigation
-- Accessible labels, alt text, keyboard focus and reduced-motion support
-- Vercel asset caching/security headers
+## Contact delivery
 
-## QA completed
-The build has been browser-rendered at **1440px desktop** and **390px mobile** across all 12 production pages. Automated checks confirmed:
-- no horizontal overflow on any tested route
-- all images load
-- one H1 per page
-- no console/page JavaScript errors
-- valid local links/assets
-- parseable JSON-LD and CSS
+The optional Vercel function at `/api/contact` sends enquiries to the fixed Helga mailbox via Purelymail SMTP with validated Reply-To. It requires private Vercel environment variables:
 
-See `QA-REPORT.txt` for the route-by-route browser run.
+- `SMTP_USER`: the full authorised Purelymail sending mailbox address.
+- `SMTP_PASS`: that mailbox’s password, or app password where required.
 
-## Items to confirm with Helga before final launch
-These were **not supplied clearly enough to invent**:
+Enter credentials privately in Vercel, never in source control, then redeploy. No account password should be reset merely to configure this form.
 
-1. **Google Business / Google Reviews link** — the onboarding form asks A WALD STUDIO for assistance, but no actual Google profile/review URL was supplied. Add this once confirmed.
-2. **Service naming:** the onboarding shorthand says `7 Min Make-Up`, while the final website copy deck brands the service as `LET'S FACE IT™ — Make-up Masterclass`. This build follows the detailed copy deck. Confirm whether “7 Min Make-Up” should also appear publicly.
-3. **Colour wording:** onboarding shorthand says `Colour Coding`; the detailed copy deck uses `KALEIDOSCOPE™ — Colour Analysis`. This build follows the detailed copy deck.
-4. **Packing wording:** onboarding shorthand says `Packing`; the detailed copy deck brands it as `TRAVEL LIGHT™ — Pack Less. Wear More.` This build follows the detailed copy deck.
-5. **Contact form delivery:** because no form/email API or SMTP credentials were supplied, the preview currently prepares a completed email to `helga@papillon-image.co.za` in the visitor's email app. Wire the form to the chosen production email/form backend before launch if fully server-side submission is preferred.
-6. **Street address:** Helga supplied a physical address during onboarding, but it is not published on the website because the form marked it optional and did not explicitly request public display. The site uses Kempton Park / Johannesburg / Gauteng for local SEO instead.
-7. **Canonical host:** the build uses `https://www.papillon-image.co.za` because Helga's copy lists the website with `www`. If the final production preference is the root domain without `www`, change canonicals/sitemap and redirect the other host.
-8. **Analytics / Search Console:** IDs/account access were not supplied. Connect these at launch so Helga owns or is primary administrator of the measurement accounts.
+Without valid configuration, the page preserves its clearly labelled email-app workflow. It does not claim a message was sent merely because an email was prepared. WhatsApp and direct email remain available. With configuration, the approved success copy is shown only after SMTP accepts the message; SMTP acceptance is not a delivery/read receipt.
 
-## A WALD STUDIO note
-This project deliberately treats colour as a sequence rather than simply covering the site in Papillon Coral. Coral remains the primary identity colour, with controlled supporting plum, sky, gold and warm neutral fields to create rhythm while keeping the visual system unmistakably Papillon.
+The backend uses fixed recipient/SMTP host, TLS verification, field and body limits, a honeypot, same-origin checks, deadlines and a small in-instance burst guard. The guard is not distributed or durable; hosting/provider abuse controls may be needed if abuse occurs. No credential or enquiry content is logged. There are no automatic retries after an uncertain send.
 
+## Verification
 
-SOCIAL LINKS
-------------
-WhatsApp: https://wa.me/27827458207
-Instagram: https://www.instagram.com/papillon_image/
-Facebook: https://www.facebook.com/PapillonImage/
+Run `npm test` for backend and frontend tests. Tests use fake SMTP/fetch; they never send real email.
 
-The Instagram handle and Facebook page were supplied by Helga in the onboarding material.
-The WhatsApp link is generated from the supplied South African mobile number (+27 82 745 8207).
-Facebook was normalised from the supplied Page ID to the public PapillonImage page URL.
+Browser checks cover desktop (1440×1000), mobile (390×844), one H1, overflow, loaded images, navigation, FAQ and all 17 page states. These viewport checks are not physical-device or Safari certification. The independent source audit checks exact copy, pricing, SEO, local links/fragments, testimonial preservation and privacy/footer placement.
 
+## Outstanding decisions
 
-A WALD STUDIO CREATOR CREDIT
-----------------------------
-A restrained "Website by A WALD STUDIO" creator credit appears in the legal footer row on all
-public pages and links to https://awaldstudio.com. It is intentionally subtle so Papillon Image
-remains the visual focus.
+The master lists Masterclass prices for both 6–10 and 10+ attendees, which overlap at exactly 10. Its supplied wording is retained pending clarification; bookings remain enquiry-based and no automatic charge is made.
 
-IOS SAFARI TYPOGRAPHY FIX
--------------------------
-The supplied Avant Garde Thin font contained malformed Unicode cmap mappings for curly
-apostrophes/quotation marks and typographic dashes. This caused iOS Safari to render contractions
-such as “isn’t” and “It’s” with large gaps in display headings. The font mappings have been corrected
-inside the supplied font itself, preserving Papillon’s official typography without substituting a
-third-party font.
+Live direct-send delivery cannot be certified until the owner privately configures SMTP and an authorised end-to-end test is completed. No DNS, mailbox credentials or other client domains are changed by this release.

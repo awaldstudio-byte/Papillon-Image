@@ -1,0 +1,15 @@
+{
+  "name": "papillon-image",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Papillon Image website and optional private SMTP contact delivery",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test tests/contact.test.cjs tests/contact-ui.test.cjs"
+  },
+  "dependencies": {
+    "nodemailer": "10.0.15"
+  }
+}

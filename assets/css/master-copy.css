@@ -1,0 +1,61 @@
+/* Final approved copy, 7 October 2026. Existing Papillon visual identity retained. */
+.nav-links{gap:clamp(.7rem,1.15vw,1.35rem);font-size:.69rem}
+.nav-shell{gap:1.2rem}
+.brand-name sup{font-family:Arial,sans-serif;font-size:.55em;vertical-align:top;position:relative;top:-.1em;margin-left:.12em}
+.hero-content .display{max-width:920px}
+.cost-big{margin-top:3rem}
+.price-card .price,.cost-big,.cost-math strong,.service-card .num,.step::before{font-family:'AvantGardeThin','AvantGarde',Arial,sans-serif}
+.cost-section .h3{max-width:520px}
+.journey-head>div{flex:1;min-width:0}
+.journey-head .prose{max-width:600px}
+.about-image picture,.about-image img{height:100%;width:100%;object-fit:cover}
+.prose h2,.prose h3{margin:2.6rem 0 1.2rem}
+.prose a:not(.button){text-decoration:underline;text-underline-offset:.22em}
+.faq-item{border-bottom:1px solid var(--line);padding:1.5rem 0}
+.faq-item:first-child{border-top:1px solid var(--line)}
+.faq-item summary{font-size:clamp(1.1rem,2vw,1.5rem);cursor:pointer;padding-right:1rem;font-weight:600}
+.faq-item .prose{padding:1.5rem 0 .25rem}
+.faq-item p{margin-bottom:0}
+.field small,.form-delivery-note{font-size:.82rem;color:#655a60;line-height:1.55}
+.form{margin-top:1.7rem}
+.form-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.form-status[data-state='error']{color:#982c3a}
+.form-status[data-state='success']{color:#235641}
+.form-status p{margin:.5rem 0}
+.form-status a{text-decoration:underline}
+.button:disabled{opacity:.65;cursor:wait;transform:none}
+:focus-visible{outline:3px solid var(--coral-deep);outline-offset:5px}
+[id]{scroll-margin-top:115px}
+.footer-location{max-width:32ch}
+.footer-bottom .footer-legal{display:flex;gap:1rem;flex-wrap:wrap}
+.footer-logo{margin-bottom:1.5rem}
+.service-card h3{overflow-wrap:anywhere}
+.hero-content .display{overflow-wrap:normal}
+/* Content remains available if JavaScript fails or is disabled. */
+.reveal{opacity:1;transform:none}
+@media(max-width:1180px){
+  .menu-toggle{display:block;flex-shrink:0;cursor:pointer}
+  .nav-links{display:none;position:fixed;top:88px;left:0;right:0;height:calc(100dvh - 88px);padding:2rem;overflow-y:auto;background:var(--cream);flex-direction:column;align-items:stretch;gap:.7rem;font-size:.9rem}
+  .nav-open .nav-links{display:flex}
+  .nav-links>a{padding:.7rem 0;font-size:inherit;border-bottom:1px solid var(--line);text-transform:uppercase;letter-spacing:.08em}
+  .nav-shell{height:88px}
+}
+@media(max-width:860px){
+  .journey-head .prose{margin-top:2rem}
+  .cost-big{font-size:clamp(5rem,18vw,9rem);margin-top:3rem}
+  .hero-content .display{font-size:clamp(2.7rem,8.4vw,5rem);line-height:1.05}
+}
+@media(max-width:620px){
+  .nav-shell{height:76px}
+  .nav-links{top:76px;height:calc(100dvh - 76px);padding:1.5rem}
+  .hero-content{min-height:calc(100svh - 112px)}
+  .hero{min-height:calc(100svh - 112px)}
+  .hero-content .display{font-size:clamp(2.65rem,11vw,4rem);line-height:1.02}
+  .hero-content{padding-block:5rem 3rem}
+  .hero-badge{display:none}
+  .brand-name{font-size:1rem}
+  .form-status.full{grid-column:1/-1}
+  .footer-bottom .footer-legal{flex-direction:column;gap:.6rem}
+  .contact-details dd{overflow-wrap:anywhere}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
